@@ -15,9 +15,7 @@ int value_final;
 double Kpagg=5;       // *************** ONLY CHANGE THESE THREE VALUES *****************
 double Kiagg=0.025 ;  // *************** ONLY CHANGE THESE THREE VALUES ***************** 
 double Kdagg=1.5;     // *************** ONLY CHANGE THESE THREE VALUES *****************
-/*double KpCons=0.5;  // *************** DO NOT CHANGE ANYTHING ELSE ********************
-double KiCons=0.05;
-double KdCons=0.25;*/
+
 double Setpoint=18;
 double error;
 int value_prev=0;
@@ -72,7 +70,7 @@ void loop() {
       distance=distance1;
       
  if(distance>40||distance<3)
-    loop();
+      distance = 20;
     
   Serial.print("Distance:");
   Serial.println(distance);
